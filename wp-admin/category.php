@@ -228,6 +228,15 @@ include ("./includes/header.php")
     <!-- Edit Part Start -->
     <?php 
     if (isset($_GET['editId'])){
+      $edit_cat = $_GET['editId'];
+
+      $sql = "SELECT * FROM wp_category WHERE c_id = '$edit_cat'";
+      $result = mysqli_query($db, $sql);
+      while($row = mysqli_fetch_assoc($result)){
+        $c_name = $row["c_name"];
+        $c_desc = $row["c_desc"];
+      }
+
       ?>
     <div class="card">
       <div class="card-header card-header-warning">
@@ -241,7 +250,7 @@ include ("./includes/header.php")
                 <div class="col-md-12">
                   <div class="form-group">
                     <label class="bmd-label-floating">Category Name</label>
-                    <input type="text" class="form-control" name="cat_name">
+                    <input type="text" value="<?php echo $c_name; ?>" class="form-control" name="cat_name">
                   </div>
                 </div>
               </div>
@@ -250,12 +259,13 @@ include ("./includes/header.php")
                   <div class="form-group">
                     <div class="form-group">
                       <label class="bmd-label-floating">Description</label>
-                      <textarea class="form-control" rows="5" name="cat_desc"></textarea>
+                      <textarea value="<?php echo $c_desc; ?>" class="form-control" rows="5"
+                        name="cat_desc"><?php echo $c_desc; ?></textarea>
                     </div>
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary" name="add_cat">Update
+              <button type="submit" class="btn btn-primary" name="edit_cat">Update
                 Category</button>
         </form>
       </div>
@@ -264,6 +274,24 @@ include ("./includes/header.php")
     }
     ?>
     <!-- Edit End -->
+    <!-- update Value -->
+    <?php
+    
+    if (isset($_POST['edit_cat'])){
+     $cat_name = $_POST['cat_name'];
+     $cat_desc = $_POST['cat_desc'];
+      // update data
+    
+     $sql = "UPDATE wp_category SET c_name = '$cat_name', c_desc= '$cat_desc' WHERE c_id= '$edit_cat'";
+     $result = mysqli_query($db, $sql);
+      if($result){
+        header("Location: category.php");
+      }else{
+        die("Data Not Update" . mysqli_error($db));
+      }
+    }
+    ?>
+
   </div>
 </div>
 
