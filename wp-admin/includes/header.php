@@ -52,6 +52,16 @@ ob_start();
               <p>Category</p>
             </a>
           </li>
+          <li class="dropdown ">
+            <a class="nav-link" href="javascript:;" id="dropdownProfile" data-toggle="dropdown">
+              <i class="material-icons">person</i>
+              <p>User Info</p>
+            </a>
+            <div class="dropdown-menu" style="width: 88%;" aria-labelledby="dropdownProfile">
+              <a class="dropdown-item" href="#">All User/a>
+                <a class="dropdown-item" href="#">Add New User</a>
+            </div>
+          </li>
 
 
         </ul>
