@@ -1,5 +1,6 @@
 <?php
    include "config.php";
+ob_start();
   //  Delete Function  here
   function delete($table, $table_id, $delete_id, $page_url){
 
@@ -7,10 +8,10 @@
    $sql = "DELETE FROM $table WHERE $table_id = '$delete_id'";
    $result = mysqli_query($db, $sql);
    if($result){
-   header('Location: '. $page_url);
+   header('Location: '.$page_url);
    }else{
    die("Delete Category Errore".mysqli_error($db));
    }
   }
-   
+   ob_end_flush();
    ?>

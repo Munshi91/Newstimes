@@ -140,9 +140,10 @@ include ("./includes/header.php")
                       <td><?php echo $c_name ?></td>
                       <td><?php echo $c_desc ?></td>
                       <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                        <a href="category.php?editId=<?php echo $c_id;?>" type="button" rel="tooltip" title="Remove"
+                          class="btn btn-danger btn-link btn-sm">
                           <i class="material-icons">edit</i>
-                        </button>
+                        </a>
                         <a href="category.php?deleteId=<?php echo $c_id;?>" type="button" rel="tooltip" title="Remove"
                           class="btn btn-danger btn-link btn-sm"><i class="material-icons">close</i></a>
                       </td>
@@ -224,6 +225,48 @@ include ("./includes/header.php")
         </div>
       </div>
     </div>
+    <!-- Edit Part Start -->
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="card">
+          <div class="card-header card-header-warning">
+            <h4 class="card-title">Edit Category</h4>
+          </div>
+          <div class="card-body table-responsive">
+            <form method="POST">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label class="bmd-label-floating">Category Name</label>
+                        <input type="text" class="form-control" name="cat_name">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Description</label>
+                          <textarea class="form-control" rows="5" name="cat_desc"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary" name="add_cat">Update
+                    Category</button>
+            </form>
+            <!-- Edit Part -->
+            <?php 
+        
+              ?>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Edit End -->
   </div>
 </div>
 
