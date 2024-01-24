@@ -7,28 +7,31 @@ include ("./includes/header.php")
     <!-- your content here -->
 
     <?php
+       // advance  option 
+       $do = isset($_POST["do"]) ? $_POST["do"] :"Manage";
 
-    if (isset($_GET["do"])){
-      $do = $_GET["do"];
-    }
+            //View All data
+            if ($do == 'Manage'){
+              echo 'All Data Show';
+            }
+            //Add New  data
+            elseif ($do == 'add'){
+        echo "Add";
 
-    //View All data
-    if ($do == 'Manage'){
-      echo 'All Data Show';
-    }
-    //Add New  data
-    elseif ($do == 'add'){
+            } 
+            // Edit  data
+            elseif ($do == 'Edit') {
+            } 
+            // Update data
+            elseif ($do == 'Update') {
+            } 
+            // Delete Data
+            elseif ($do == 'delete') {
+            }
 
-    } 
-    // Edit  data
-    elseif ($do == 'Edit') {
-    } 
-    // Update data
-    elseif ($do == 'Update') {
-    } 
-    // Delete Data
-    elseif ($do == 'delete') {
-    }
+    
+
+    
     ?>
 
   </div>

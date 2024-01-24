@@ -59,7 +59,7 @@ ob_start();
             </a>
             <div class="dropdown-menu" style="width: 88%;" aria-labelledby="dropdownProfile">
               <a class="dropdown-item" href="users.php?do=Manage">All User</a>
-              <a class="dropdown-item" href="#">Add New User</a>
+              <a class="dropdown-item" href="users.php?do=add">Add New User</a>
             </div>
           </li>
 
