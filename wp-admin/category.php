@@ -226,46 +226,46 @@ include ("./includes/header.php")
       </div>
     </div>
     <!-- Edit Part Start -->
-    <div class="row">
-      <div class="col-lg-12 col-md-12">
-        <div class="card">
-          <div class="card-header card-header-warning">
-            <h4 class="card-title">Edit Category</h4>
-          </div>
-          <div class="card-body table-responsive">
-            <form method="POST">
+    <?php 
+    if (isset($_GET["editId"])){
+      ?>
+
+    <div class="card">
+      <div class="card-header card-header-warning">
+        <h4 class="card-title">Edit Category</h4>
+      </div>
+      <div class="card-body table-responsive">
+        <form method="POST">
+          <div class="row">
+            <div class="col-md-12">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="bmd-label-floating">Category Name</label>
-                        <input type="text" class="form-control" name="cat_name">
-                      </div>
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Category Name</label>
+                    <input type="text" class="form-control" name="cat_name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Description</label>
+                      <textarea class="form-control" rows="5" name="cat_desc"></textarea>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Description</label>
-                          <textarea class="form-control" rows="5" name="cat_desc"></textarea>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary" name="add_cat">Update
-                    Category</button>
-            </form>
-            <!-- Edit Part -->
-            <?php 
-        
-              ?>
-
-          </div>
-        </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" name="add_cat">Update
+                Category</button>
+        </form>
       </div>
     </div>
+
+    <?php
+    }
+    
+    ?>
     <!-- Edit End -->
   </div>
 </div>
