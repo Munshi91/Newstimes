@@ -227,9 +227,8 @@ include ("./includes/header.php")
     </div>
     <!-- Edit Part Start -->
     <?php 
-    if (isset($_GET["editId"])){
+    if (isset($_GET['editId'])){
       ?>
-
     <div class="card">
       <div class="card-header card-header-warning">
         <h4 class="card-title">Edit Category</h4>
@@ -261,10 +260,8 @@ include ("./includes/header.php")
         </form>
       </div>
     </div>
-
     <?php
     }
-    
     ?>
     <!-- Edit End -->
   </div>
