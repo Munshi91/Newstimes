@@ -158,17 +158,15 @@ include ("./includes/header.php")
                    if (isset($_GET['deleteId'])) {
                 $item_id = $_GET['deleteId'];
 
-                $sql = "DELETE FROM wp_category WHERE c_id = '$item_id'";
-                $result = mysqli_query($db, $sql);
-              if($result){
-                header('Location: category.php');
-              }else{
-               die("Delete Category Errore".mysqli_error($db));
-              }
-                   }
-                    
-                    ?>
+                $table = "wp_category";
+                $table_id = 'c_id';
+                $delete_id = $_GET['deleteId'];
+                $page_url = 'category.php';
 
+
+                delete($table,$table_id,$delete_id,$page_url);
+                   }                
+                    ?>
             </div>
           </div>
         </div>
