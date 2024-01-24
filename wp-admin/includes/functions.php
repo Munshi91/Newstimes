@@ -1,7 +1,6 @@
 <?php
    include "config.php";
   //  Delete Function  here
-
   function delete($table, $table_id, $delete_id, $page_url){
 
   global $db; 

@@ -156,15 +156,13 @@ include ("./includes/header.php")
               <!-- delete category -->
               <?php 
                    if (isset($_GET['deleteId'])) {
-                $item_id = $_GET['deleteId'];
-
-                $table = "wp_category";
+                $table = 'wp_category';
                 $table_id = 'c_id';
                 $delete_id = $_GET['deleteId'];
                 $page_url = 'category.php';
-
-
+                
                 delete($table,$table_id,$delete_id,$page_url);
+                
                    }                
                     ?>
             </div>
