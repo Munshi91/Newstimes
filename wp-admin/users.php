@@ -9,6 +9,8 @@ include ("./includes/header.php")
     <?php
        // advance  option 
        $do = isset($_POST["do"]) ? $_POST["do"] :"Manage";
+  
+
 
             //View All data
             if ($do == 'Manage'){
