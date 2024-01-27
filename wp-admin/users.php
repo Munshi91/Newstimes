@@ -10,8 +10,6 @@ include ("./includes/header.php")
        // advance  option 
        $do = isset($_POST["do"]) ? $_POST["do"] :"Manage";
   
-
-
             //View All data
             if ($do == 'Manage'){
               echo 'All Data Show';
@@ -30,10 +28,6 @@ include ("./includes/header.php")
             // Delete Data
             elseif ($do == 'delete') {
             }
-
-    
-
-    
     ?>
 
   </div>
