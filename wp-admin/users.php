@@ -59,21 +59,19 @@ include ("./includes/header.php")
                   <td><?php 
                   
                   if ($u_role == "1"){
-                    echo '<span class="">Admin</span>';
+                    echo 'Admin';
                   }
                   if ($u_role == "0") {
-                    echo '<span class="">Subscriber</span>';
+                    echo 'Subscriber';
                   }
                   
                   ?></td>
-                  <td class="td-actions text-center">
-                    <a type="button" href="users.php?editId= <?php echo $u_id ?>" rel="tooltip" title="Edit"
-                      class="btn btn-primary btn-link btn-sm">
+                  <td class="td-actions text-right">
+                    <a href="#" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
                       <i class="material-icons">edit</i>
                     </a>
-                    <a type="button" href="#" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                      <i class="material-icons">close</i>
-                    </a>
+                    <a href="#" type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i
+                        class="material-icons">close</i></a>
                   </td>
                 </tr>
                 <?php
